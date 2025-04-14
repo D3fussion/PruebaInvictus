@@ -8,9 +8,6 @@ import reactivoRoutes from './routes/reactivoRoutes.js';
 import inicioRoutes from './routes/inicioRoutes.js';
 import notificacionRoutes from './routes/notificacionRoutes.js';
 
-import { createServer } from '@vercel/node';
-import { parse } from 'url';
-
 dotenv.config();
 conectarDB();
 
