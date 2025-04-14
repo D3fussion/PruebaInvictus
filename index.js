@@ -1,10 +1,12 @@
+// IMPORTACIONES
 import express from 'express';
 import dotenv from 'dotenv';
-import conectarDB from '../config/db.js';
+import conectarDB from './config/db.js';
 
-import reactivoRoutes from '../routes/reactivoRoutes.js';
-import inicioRoutes from '../routes/inicioRoutes.js';
-import notificacionRoutes from '../routes/notificacionRoutes.js';
+// RUTAS PARA LA API
+import reactivoRoutes from '/routes/reactivoRoutes.js';
+import inicioRoutes from '/routes/inicioRoutes.js';
+import notificacionRoutes from '/routes/notificacionRoutes.js';
 
 import { createServer } from '@vercel/node';
 import { parse } from 'url';
