@@ -5,7 +5,7 @@
 	"description": "Proyecto Rest API para la aplicacion de Invictus",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "vercel dev",
 		"dev": "nodemon index.js",
 		"seed": "node utils/runSeeds.js"
 	},
