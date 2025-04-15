@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/reactivos", reactivoRoutes);
-app.use("/", inicioRoutes);
+app.use("/api/inicio", inicioRoutes);
 // app.use("/api/notificaciones", notificacionRoutes);
 
 export default app;
