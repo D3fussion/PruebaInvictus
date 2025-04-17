@@ -7,7 +7,7 @@ import observarMantenimientos from "../middleware/notificaciones/detectarEquipoM
 // Aqui se activa el MiddleWare
 observarAgotados();
 observarNuevasCalendarizaciones();
-observarMantenimientos();
+// observarMantenimientos();
 
 const datosNotificaciones = async (req, res) => {
     try {
