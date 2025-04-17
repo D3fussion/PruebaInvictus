@@ -16,6 +16,6 @@ app.use(express.json());
 
 app.use("/api/reactivos", reactivoRoutes);
 app.use("/api/inicio", inicioRoutes);
-// app.use("/api/notificaciones", notificacionRoutes);
+app.use("/api/notificaciones", notificacionRoutes);
 
 export default app;
