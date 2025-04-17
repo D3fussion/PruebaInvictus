@@ -1,11 +1,6 @@
 import EstadoNotificacion from "../../../models/notificaciones/EstadoNotificacion.js";
 
-let cachedEstadoNotificacion = null;
-
 const conseguirIDEstadoNotificacion = async () => {
-    if (cachedEstadoNotificacion) {
-        return cachedEstadoNotificacion;
-    }
 
     const [leido, sinLeer, eliminado] = await Promise.all([
         EstadoNotificacion.findOne({ nombre: "Leido" }),
