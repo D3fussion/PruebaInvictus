@@ -1,11 +1,6 @@
 import TipoNotificacion from "../../../models/notificaciones/TipoNotificacion.js";
 
-let cachedTipoNotificacion = null;
-
 const conseguirIDTipoNotificacion = async () => {
-    if (cachedTipoNotificacion) {
-        return cachedTipoNotificacion;
-    }
 
     const [reactivoAgotado, equipoCalendarizado, equipoMantenimiento] = await Promise.all([
         TipoNotificacion.findOne({ nombre: "Reactivo Agotado" }),
