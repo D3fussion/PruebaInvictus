@@ -2,11 +2,9 @@ import TipoNotificacion from "../../../models/notificaciones/TipoNotificacion.js
 
 const conseguirIDTipoNotificacion = async () => {
 
-    const [reactivoAgotado, equipoCalendarizado, equipoMantenimiento] = await Promise.all([
-        TipoNotificacion.findOne({ nombre: "Reactivo Agotado" }),
-        TipoNotificacion.findOne({ nombre: "Equipo Calendarizado" }),
-        TipoNotificacion.findOne({ nombre: "Equipo en Mantenimiento" })
-    ]);
+    const reactivoAgotado = await TipoNotificacion.findOne({ nombre: "Reactivo Agotado" });
+    const equipoCalendarizado = await TipoNotificacion.findOne({ nombre: "Equipo Calendarizado" });
+    const equipoMantenimiento = await TipoNotificacion.findOne({ nombre: "Equipo en Mantenimiento" });
 
     if (!reactivoAgotado || !equipoCalendarizado || !equipoMantenimiento) {
         throw new Error("Uno o más tipos de notificación no existen en la base de datos");
