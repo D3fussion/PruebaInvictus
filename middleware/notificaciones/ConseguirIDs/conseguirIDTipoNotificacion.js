@@ -10,12 +10,11 @@ const conseguirIDTipoNotificacion = async () => {
         throw new Error("Uno o más tipos de notificación no existen en la base de datos");
     }
 
-    cachedTipoNotificacion = [
+    return [
         reactivoAgotado._id,
         equipoCalendarizado._id,
         equipoMantenimiento._id
     ];
-    return cachedTipoNotificacion;
 };
 
 export default conseguirIDTipoNotificacion;
